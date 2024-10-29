@@ -39,7 +39,6 @@ def addUser():
         cursor.execute(sql, data)
         db.database.commit()
     return redirect(url_for('home'))
-
 #ruta para eliminar usurios
 @app.route('/delete/<int:id>')
 def  delete(id):
@@ -49,7 +48,6 @@ def  delete(id):
     cursor.execute(sql, data)
     db.database.commit()
     return redirect(url_for('home'))
-
 #ruta para ediar  usuarios
 @app.route('/edit/<int:id>', methods=['POST'])
 def edit(id):
@@ -65,8 +63,6 @@ def edit(id):
         cursor.execute(sql, data)
         db.database.commit()
     return redirect(url_for('home'))
-    
-    
 if __name__== '__main__':
     app.run(debug=True, port=5000)
     
